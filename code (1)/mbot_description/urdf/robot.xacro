@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mbot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.031718 0.0010788 0.0093612"
+        rpy="0 0 0" />
+      <mass
+        value="0.65742" />
+      <inertia
+        ixx="0.0012148"
+        ixy="-1.669E-10"
+        ixz="-8.961E-05"
+        iyy="0.0017714"
+        iyz="4.3457E-10"
+        izz="0.0028629" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="5.9507E-10 0.00090446 1.4781E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.055191" />
+      <inertia
+        ixx="2.1623E-05"
+        ixy="-6.4631E-13"
+        ixz="4.6E-13"
+        iyy="3.7506E-05"
+        iyz="-5.6463E-14"
+        izz="2.1623E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0817787986999904 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="-5.1502E-10 -0.00090446 -3.3273E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.055191" />
+      <inertia
+        ixx="2.1623E-05"
+        ixy="-4.8348E-13"
+        ixz="4.3197E-13"
+        iyy="3.7506E-05"
+        iyz="-4.3261E-13"
+        izz="2.1623E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0796212013000096 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="caster">
+    <inertial>
+      <origin
+        xyz="-0.00317173717020319 -3.26267206180726E-09 -0.00521478607045461"
+        rpy="0 0 0" />
+      <mass
+        value="0.00355610174138765" />
+      <inertia
+        ixx="3.02924783100049E-07"
+        ixy="-7.21343178456743E-14"
+        ixz="-4.35847300443475E-08"
+        iyy="3.00780336049954E-07"
+        iyz="2.10490590568135E-14"
+        izz="4.45421482341645E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="casters"
+    type="continuous">
+    <origin
+      xyz="0.1085 0.00107879869999038 0.0018"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="ball">
+    <inertial>
+      <origin
+        xyz="4.85722573273506E-17 2.64068238256525E-06 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00357800810368399" />
+      <inertia
+        ixx="2.10467220616672E-07"
+        ixy="-2.13210127870429E-22"
+        ixz="1.59021164530962E-23"
+        iyy="3.42235978633314E-07"
+        iyz="-6.4851318376887E-24"
+        izz="2.10467220616672E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="balls"
+    type="continuous">
+    <origin
+      xyz="-0.0135 0 -0.0201000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="caster" />
+    <child
+      link="ball" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="shexiangtou">
+    <inertial>
+      <origin
+        xyz="0.007417 -1.1743E-15 -1.1657E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0049386" />
+      <inertia
+        ixx="3.7138E-07"
+        ixy="-2.3147E-21"
+        ixz="9.212E-22"
+        iyy="4.3413E-07"
+        iyz="5.9739E-22"
+        izz="4.2766E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/shexiangtou.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/shexiangtou.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shexiang"
+    type="fixed">
+    <origin
+      xyz="0.123529215768874 0.00107879869999066 0.1404"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shexiangtou" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+    <gazebo reference="shexiangtou">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <gazebo reference="shexiangtou">
+        <sensor type="depth" name="camera">
+            <always_on>true</always_on>
+            <update_rate>20.0</update_rate>
+            <camera>
+                <horizontal_fov>1.047</horizontal_fov>
+                <image>
+                    <format>R8G8B8</format>
+                    <width>640</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>20.0</far>
+                </clip>
+            </camera>
+            <plugin name="kinect_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+                <cameraName>camera</cameraName>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>10</updateRate>
+                <imageTopicName>rgb/image_raw</imageTopicName>
+                <depthImageTopicName>depth/image_raw</depthImageTopicName>
+                <pointCloudTopicName>depth/points</pointCloudTopicName>
+                <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+                <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+                <frameName>camera_frame_optical</frameName>
+                <baseline>0.1</baseline>
+                <distortion_k1>0.0</distortion_k1>
+                <distortion_k2>0.0</distortion_k2>
+                <distortion_k3>0.0</distortion_k3>
+                <distortion_t1>0.0</distortion_t1>
+                <distortion_t2>0.0</distortion_t2>
+                <pointCloudCutoff>0.05</pointCloudCutoff>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo>
+        <plugin filename="libgazebo_ros_planar_move.so" name="robot_move">
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <odometryRate>50</odometryRate>
+            <robotBaseFrame>base_link</robotBaseFrame>
+        </plugin>
+    </gazebo>
+
+    
+</robot>
